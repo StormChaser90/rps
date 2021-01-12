@@ -5,6 +5,9 @@
     <meta charset="UTF-8" />
   </head>
   <body>
+      <div>
+          <button id = "startBtn">click to start game</button>
+      </div>
     <script>
       // Global variables
       // Initialise player score to zero
@@ -14,7 +17,11 @@
       // Initialise games played to zero
       let gamesPlayed = 0;
 
-      // Function that generates equally random choice for computer
+        // add start game button
+        let start = 
+
+      // Function that generates equally random choice 
+      // for computer
       function computerPlay() {
         // array containing choices
         const computerSelection = ["rock", "paper", "scissors"];
@@ -27,11 +34,13 @@
       // call function computerPlay 
     computerPlay();
 
-      // create variable to store users choice input, provide choices
+      // create variable to store users choice input, 
+      // provide choices
       let playerSelection = prompt("Choose one", "rock, paper, or scissors");
       console.log(playerSelection);
 
-      // create a function that plays 1 round of RPS, this function takes two parameters, playerSelection and computerSelection.
+      // create a function that plays 1 round of RPS, 
+      // this function takes two parameters, playerSelection and computerSelection.
       function playRound(playerSelection, computerSelection) {
         computerSelection = computerPlay().toLowerCase(); // make computer choice lowercase
         playerSelection = playerSelection().toLowerCase(); // make player choice lowercase
@@ -51,12 +60,17 @@
           // function to add to users score
         }
       }
-playRound();
-      // important note; you want to return the results of this function call, not console.log() them. To test this function console.log the results (check odin page for reference).
+// playRound();
+      // important note; you want to return the results 
+      // of this function call, not console.log() them. 
+      // To test this function console.log the results 
+      // (check odin page for reference).
 
       // write a new function called game
 
-      // use previous function INSIDE this one to play a 5 round game that keeps score and reports winner or loser at end.
+      // use previous function INSIDE this one to play a 
+      // 5 round game that keeps score and reports winner 
+      // or loser at end.
     </script>
   </body>
 </html>
