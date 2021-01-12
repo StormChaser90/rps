@@ -5,7 +5,9 @@
     <meta charset="UTF-8" />
   </head>
   <body>
-    <button onclick="startRound()" id="startBtn">click to start game</button>
+    <button onclick="rock()" id="rock">Rock</button>
+    <button onclick="paper()" id="paper">Paper</button>
+    <button onclick="scissors()" id="scissors">Scissors</button>
     <p id="playerChoice"></p>
     <p id="computerChoice"></p>
     <script>
@@ -17,26 +19,21 @@
       // Initialise games played to zero
       let gamesPlayed = 0;
 
-      // starting the game
-      function startRound() {
-        // create variable to store users choice input,
-        // provide choices
-        let playerSelection = prompt("Choose one", "rock, paper, or scissors");
-        if (playerSelection == null || playerSelection == "") {
-          txt = "User cancelled game.";
-        } else {
-          txt = "You chose: " + playerSelection;
-        }
+      // when player selects rock
+      function rock() {
+        txt = "You chose rock";
         document.getElementById("playerChoice").innerHTML = txt;
-        // Function that generates equally random choice
-        // for computer
+        // run random choice for computer
         function computerPlay() {
           // array containing choices
           const computerSelection = ["rock", "paper", "scissors"];
           // random function to choose from array
-          const random = computerSelection[Math.floor(Math.random() * computerSelection.length)];
+          const random =
+            computerSelection[
+              Math.floor(Math.random() * computerSelection.length)
+            ];
           // log computers random choice
-          //   console.log(random, computerSelection[random]);
+          // console.log(random, computerSelection[random]);
           txtC = "Computer chose: " + random;
           // display computers choice on screen
           document.getElementById("computerChoice").innerHTML = txtC;
@@ -44,31 +41,6 @@
         computerPlay();
       }
 
-      // call function computerPlay
-      // computerPlay();
-
-      // create a function that plays 1 round of RPS,
-      // this function takes two parameters, playerSelection and computerSelection.
-      function playRound(playerSelection, computerSelection) {
-        computerSelection = computerPlay().toLowerCase(); // make computer choice lowercase
-        playerSelection = playerSelection().toLowerCase(); // make player choice lowercase
-        if (computerSelection === playerSelection) {
-          // define tie
-          displayResults("Tie Game!");
-        } else if (
-          // define winning choices for computer
-          (computerSelection == "rock" && playerSelection == "scissors") ||
-          (computerSelection == "paper" && playerSelection == "rock") ||
-          (computerSelection == "scissors" && playerSelection == "paper")
-        ) {
-          displayResults("Computer Wins!");
-          // function to add to computers score
-        } else {
-          displayResults("You Win!");
-          // function to add to users score
-        }
-      }
-      // playRound();
       // important note; you want to return the results
       // of this function call, not console.log() them.
       // To test this function console.log the results
