@@ -40,6 +40,49 @@
         }
         computerPlay();
       }
+      // when player selects paper
+      function paper() {
+        txt = "You chose paper";
+        document.getElementById("playerChoice").innerHTML = txt;
+        // run random choice for computer
+        function computerPlay() {
+          // array containing choices
+          const computerSelection = ["rock", "paper", "scissors"];
+          // random function to choose from array
+          const random =
+            computerSelection[
+              Math.floor(Math.random() * computerSelection.length)
+            ];
+          // log computers random choice
+          // console.log(random, computerSelection[random]);
+          txtC = "Computer chose: " + random;
+          // display computers choice on screen
+          document.getElementById("computerChoice").innerHTML = txtC;
+        }
+        computerPlay();
+      }
+
+      // when player selects scissors
+      function scissors() {
+        txt = "You chose scissors";
+        document.getElementById("playerChoice").innerHTML = txt;
+        // run random choice for computer
+        function computerPlay() {
+          // array containing choices
+          const computerSelection = ["rock", "paper", "scissors"];
+          // random function to choose from array
+          const random =
+            computerSelection[
+              Math.floor(Math.random() * computerSelection.length)
+            ];
+          // log computers random choice
+          // console.log(random, computerSelection[random]);
+          txtC = "Computer chose: " + random;
+          // display computers choice on screen
+          document.getElementById("computerChoice").innerHTML = txtC;
+        }
+        computerPlay();
+      }
 
       // important note; you want to return the results
       // of this function call, not console.log() them.
