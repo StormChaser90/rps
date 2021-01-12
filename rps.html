@@ -5,9 +5,8 @@
     <meta charset="UTF-8" />
   </head>
   <body>
-      <div>
-          <button onclick="startRound()" id = "startBtn">click to start game</button>
-      </div>
+      <button onclick="startRound()" id="startBtn">click to start game</button>
+<p id="playerChoice"></p>
     <script>
       // Global variables
       // Initialise player score to zero
@@ -17,20 +16,22 @@
       // Initialise games played to zero
       let gamesPlayed = 0;
 
-// starting the game
-   function startRound() {
-        // add start game button function
-    //     let btn = document.getElementById("startBtn");
-    //     btn.addEventListener('start', alertMe);
-    //     function alertMe() {
-    //   // create variable to store users choice input, 
-    //   // provide choices
-      let playerSelection = prompt("Choose one", "rock, paper, or scissors");
-      console.log(playerSelection);
-   }
-   
+      // starting the game
+      function startRound() {
+        // variable for displayed player selection
+        let recordedScore;
+        // create variable to store users choice input,
+        // provide choices
+        let playerSelection = prompt("Choose one", "rock, paper, or scissors");
+        if (playerSelection == null || playerSelection == "") {
+            txt = "User cancelled game.";
+        } else {
+            txt = ("You chose: " + playerSelection);
+        }
+        document.getElementById("playerChoice").innerHTML = txt;
+      }
 
-      // Function that generates equally random choice 
+      // Function that generates equally random choice
       // for computer
       function computerPlay() {
         // array containing choices
@@ -41,10 +42,10 @@
         console.log(random, computerSelection[random]);
       }
 
-      // call function computerPlay 
-    // computerPlay();
+      // call function computerPlay
+      // computerPlay();
 
-      // create a function that plays 1 round of RPS, 
+      // create a function that plays 1 round of RPS,
       // this function takes two parameters, playerSelection and computerSelection.
       function playRound(playerSelection, computerSelection) {
         computerSelection = computerPlay().toLowerCase(); // make computer choice lowercase
@@ -65,16 +66,16 @@
           // function to add to users score
         }
       }
-// playRound();
-      // important note; you want to return the results 
-      // of this function call, not console.log() them. 
-      // To test this function console.log the results 
+      // playRound();
+      // important note; you want to return the results
+      // of this function call, not console.log() them.
+      // To test this function console.log the results
       // (check odin page for reference).
 
       // write a new function called game
 
-      // use previous function INSIDE this one to play a 
-      // 5 round game that keeps score and reports winner 
+      // use previous function INSIDE this one to play a
+      // 5 round game that keeps score and reports winner
       // or loser at end.
     </script>
   </body>
