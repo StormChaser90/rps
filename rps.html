@@ -6,47 +6,59 @@
   </head>
   <body>
     <script>
-        // Global variables
-        // Initialise player score to zero
-let playerScore = 0;
-        // Initialise computer score to zero
-let computerScore = 0;
-        // Initialise games played to zero
-let gamesPlayed = 0;
+      // Global variables
+      // Initialise player score to zero
+      let playerScore = 0;
+      // Initialise computer score to zero
+      let computerScore = 0;
+      // Initialise games played to zero
+      let gamesPlayed = 0;
 
-// Function that generates equally random choice for computer
-function computerPlay() {
-    // array containing choices
-    const computerSelection = ["rock", "paper", "scissors"];
-    // random function to choose from the array
-    const random = Math.floor(Math.random() * computerSelection.length);
+      // Function that generates equally random choice for computer
+      function computerPlay() {
+        // array containing choices
+        const computerSelection = ["rock", "paper", "scissors"];
+        // random function to choose from array
+        const random = Math.floor(Math.random() * computerSelection.length);
+        // log computers random choice
+        console.log(random, computerSelection[random]);
+      }
 
-    console.log(random, computerSelection[random]);
+      // create a function that plays 1 round of RPS, this function takes two parameters, playerSelection and computerSelection.
+      function playRound(playerSelection, computerSelection) {
+          computerSelection = computerPlay().toLowerCase();  // make computer choice lowercase
+          playerSelection = playerSelection().toLowerCase(); // make player choice lowercase
+          if (computerSelection === playerSelection) { // define tie
+              displayResults("Tie Game!");
+          } else if ( // define winning choices for computer
+              (computerSelection == "rock" && playerSelection == "scissors") ||
+              (computerSelection == "paper" && playerSelection == "rock") ||
+              (computerSelection == "scissors" && playerSelection == "paper")
+          ) {
+          displayResults("Computer Wins!");
+          } else {
+              displayResults("You Win!");
+          }
+        // name constant called rock, wins against scissors, loses against paper.
+
+      // name constant called paper, wins against rock, loses against scissors.
+
+      // name constant called scissors, wins against papers, loses against rock.
+     
+    
     }
-// name constant called rock, wins against scissors, loses against paper.
 
-// name constant called paper, wins against rock, loses against scissors.
+      // using the variables generated from random, compare playerSelection against computerSelection
 
-// name constant called scissors, wins against papers, loses against rock.
+      // return a string declaring the winner of round.
 
-// // create a variable named items, containing rock, paper, and scissors.
-// let items = {["rock", "paper", "scissors"]}
-// // return random of items; rock, paper, or scissors
+  
 
-// // create a function that plays 1 round of RPS, this function takes two parameters, playerSelection and computerSelection.
-// function playRound(playerSelection, computerSelection);
-// using the variables generated from random, compare playerSelection against computerSelection 
+      // important note; you want to return the results of this function call, not console.log() them. To test this function console.log the results (check odin page for reference).
 
-// return a string declaring the winner of round.
+      // write a new function called game
 
-// make function case insensitive
-
-// important note; you want to return the results of this function call, not console.log() them. To test this function console.log the results (check odin page for reference).
-
-// write a new function called game
-
-// use previous function INSIDE this one to play a 5 round game that keeps score and reports winner or loser at end.
-
+      // use previous function INSIDE this one to play a 5 round game that keeps score and reports winner or loser at end.
     </script>
   </body>
 </html>
