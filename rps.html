@@ -5,8 +5,9 @@
     <meta charset="UTF-8" />
   </head>
   <body>
-      <button onclick="startRound()" id="startBtn">click to start game</button>
-<p id="playerChoice"></p>
+    <button onclick="startRound()" id="startBtn">click to start game</button>
+    <p id="playerChoice"></p>
+    <p id="computerChoice"></p>
     <script>
       // Global variables
       // Initialise player score to zero
@@ -18,28 +19,29 @@
 
       // starting the game
       function startRound() {
-        // variable for displayed player selection
-        let recordedScore;
         // create variable to store users choice input,
         // provide choices
         let playerSelection = prompt("Choose one", "rock, paper, or scissors");
         if (playerSelection == null || playerSelection == "") {
-            txt = "User cancelled game.";
+          txt = "User cancelled game.";
         } else {
-            txt = ("You chose: " + playerSelection);
+          txt = "You chose: " + playerSelection;
         }
         document.getElementById("playerChoice").innerHTML = txt;
-      }
-
-      // Function that generates equally random choice
-      // for computer
-      function computerPlay() {
-        // array containing choices
-        const computerSelection = ["rock", "paper", "scissors"];
-        // random function to choose from array
-        const random = Math.floor(Math.random() * computerSelection.length);
-        // log computers random choice
-        console.log(random, computerSelection[random]);
+        // Function that generates equally random choice
+        // for computer
+        function computerPlay() {
+          // array containing choices
+          const computerSelection = ["rock", "paper", "scissors"];
+          // random function to choose from array
+          const random = Math.floor(Math.random() * computerSelection.length);
+          // log computers random choice
+          //   console.log(random, computerSelection[random]);
+          txtC = "Computer chose: " + random;
+          // display computers choice on screen
+          document.getElementById("computerChoice").innerHTML = txtC;
+        }
+        computerPlay();
       }
 
       // call function computerPlay
