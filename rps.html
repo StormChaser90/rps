@@ -14,31 +14,27 @@ let computerScore = 0;
         // Initialise games played to zero
 let gamesPlayed = 0;
 
-// Function that generates random choice for computer
-// name a function called computerPlay
+// Function that generates equally random choice for computer
 function computerPlay() {
-    const number = Math.floor(Math.random() * 1000);
-    if (number % 3 === 0) {
-        return 'rock';
-    }
-    if (number % 3 === 1) {
-        return 'paper';
-    }
-    return 'scissors';
-}
+    // array containing choices
+    const computerSelection = ["rock", "paper", "scissors"];
+    // random function to choose from the array
+    const random = Math.floor(Math.random() * computerSelection.length);
 
+    console.log(random, computerSelection[random]);
+    }
 // name constant called rock, wins against scissors, loses against paper.
 
 // name constant called paper, wins against rock, loses against scissors.
 
 // name constant called scissors, wins against papers, loses against rock.
 
-// create a variable named items, containing rock, paper, and scissors.
-let items = {["rock", "paper", "scissors"]}
-// return random of items; rock, paper, or scissors
+// // create a variable named items, containing rock, paper, and scissors.
+// let items = {["rock", "paper", "scissors"]}
+// // return random of items; rock, paper, or scissors
 
-// create a function that plays 1 round of RPS, this function takes two parameters, playerSelection and computerSelection.
-function playRound(playerSelection, computerSelection);
+// // create a function that plays 1 round of RPS, this function takes two parameters, playerSelection and computerSelection.
+// function playRound(playerSelection, computerSelection);
 // using the variables generated from random, compare playerSelection against computerSelection 
 
 // return a string declaring the winner of round.
