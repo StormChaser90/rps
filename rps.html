@@ -6,6 +6,50 @@
   </head>
   <body>
     <script>
+        // Global variables
+        // Initialise player score to zero
+let playerScore = 0;
+        // Initialise computer score to zero
+let computerScore = 0;
+        // Initialise games played to zero
+let gamesPlayed = 0;
+
+// Function that generates random choice for computer
+// name a function called computerPlay
+function computerPlay() {
+    const number = Math.floor(Math.random() * 1000);
+    if (number % 3 === 0) {
+        return 'rock';
+    }
+    if (number % 3 === 1) {
+        return 'paper';
+    }
+    return 'scissors';
+}
+
+// name constant called rock, wins against scissors, loses against paper.
+
+// name constant called paper, wins against rock, loses against scissors.
+
+// name constant called scissors, wins against papers, loses against rock.
+
+// create a variable named items, containing rock, paper, and scissors.
+let items = {["rock", "paper", "scissors"]}
+// return random of items; rock, paper, or scissors
+
+// create a function that plays 1 round of RPS, this function takes two parameters, playerSelection and computerSelection.
+function playRound(playerSelection, computerSelection);
+// using the variables generated from random, compare playerSelection against computerSelection 
+
+// return a string declaring the winner of round.
+
+// make function case insensitive
+
+// important note; you want to return the results of this function call, not console.log() them. To test this function console.log the results (check odin page for reference).
+
+// write a new function called game
+
+// use previous function INSIDE this one to play a 5 round game that keeps score and reports winner or loser at end.
 
     </script>
   </body>
