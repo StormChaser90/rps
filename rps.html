@@ -6,7 +6,7 @@
   </head>
   <body>
       <div>
-          <button id = "startBtn">click to start game</button>
+          <button onclick="startRound()" id = "startBtn">click to start game</button>
       </div>
     <script>
       // Global variables
@@ -17,8 +17,18 @@
       // Initialise games played to zero
       let gamesPlayed = 0;
 
-        // add start game button
-        let start = 
+// starting the game
+   function startRound() {
+        // add start game button function
+    //     let btn = document.getElementById("startBtn");
+    //     btn.addEventListener('start', alertMe);
+    //     function alertMe() {
+    //   // create variable to store users choice input, 
+    //   // provide choices
+      let playerSelection = prompt("Choose one", "rock, paper, or scissors");
+      console.log(playerSelection);
+   }
+   
 
       // Function that generates equally random choice 
       // for computer
@@ -32,12 +42,7 @@
       }
 
       // call function computerPlay 
-    computerPlay();
-
-      // create variable to store users choice input, 
-      // provide choices
-      let playerSelection = prompt("Choose one", "rock, paper, or scissors");
-      console.log(playerSelection);
+    // computerPlay();
 
       // create a function that plays 1 round of RPS, 
       // this function takes two parameters, playerSelection and computerSelection.
