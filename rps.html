@@ -34,7 +34,7 @@
           // array containing choices
           const computerSelection = ["rock", "paper", "scissors"];
           // random function to choose from array
-          const random = Math.floor(Math.random() * computerSelection.length);
+          const random = computerSelection[Math.floor(Math.random() * computerSelection.length)];
           // log computers random choice
           //   console.log(random, computerSelection[random]);
           txtC = "Computer chose: " + random;
