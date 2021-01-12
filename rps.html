@@ -24,28 +24,34 @@
         console.log(random, computerSelection[random]);
       }
 
+      // call function computerPlay 
+    computerPlay();
+
+      // create variable to store users choice input, provide choices
+      let playerSelection = prompt("Choose one", "rock, paper, or scissors");
+      console.log(playerSelection);
+
       // create a function that plays 1 round of RPS, this function takes two parameters, playerSelection and computerSelection.
       function playRound(playerSelection, computerSelection) {
-          computerSelection = computerPlay().toLowerCase();  // make computer choice lowercase
-          playerSelection = playerSelection().toLowerCase(); // make player choice lowercase
-          if (computerSelection === playerSelection) { // define tie
-              displayResults("Tie Game!");
-          } else if ( // define winning choices for computer
-              (computerSelection == "rock" && playerSelection == "scissors") ||
-              (computerSelection == "paper" && playerSelection == "rock") ||
-              (computerSelection == "scissors" && playerSelection == "paper")
-          ) {
+        computerSelection = computerPlay().toLowerCase(); // make computer choice lowercase
+        playerSelection = playerSelection().toLowerCase(); // make player choice lowercase
+        if (computerSelection === playerSelection) {
+          // define tie
+          displayResults("Tie Game!");
+        } else if (
+          // define winning choices for computer
+          (computerSelection == "rock" && playerSelection == "scissors") ||
+          (computerSelection == "paper" && playerSelection == "rock") ||
+          (computerSelection == "scissors" && playerSelection == "paper")
+        ) {
           displayResults("Computer Wins!");
           // function to add to computers score
-          } else {
-              displayResults("You Win!");
-              // function to add to users score
-          }
+        } else {
+          displayResults("You Win!");
+          // function to add to users score
         }
-          // user input field, provide choices
-          prompt("Choose one", "rock, paper, or scissors");
-
-
+      }
+// playRound();
       // important note; you want to return the results of this function call, not console.log() them. To test this function console.log the results (check odin page for reference).
 
       // write a new function called game
