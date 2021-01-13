@@ -70,6 +70,12 @@
         }
         currentRound++;
         computerPlay();
+// counter that alerts first to 5 points
+if (playerScore === 5) {
+    alert("YOU WIN THE GAME!")
+} else if (computerScore === 5) {
+    alert("Sorry, loser. The computer won!")
+}
       }
 
       // when player selects paper
@@ -105,6 +111,12 @@
         }
         currentRound++;
         computerPlay();
+        // counter that alerts first to 5 points
+if (playerScore === 5) {
+    alert("YOU WIN THE GAME!")
+} else if (computerScore === 5) {
+    alert("Sorry, loser. The computer won!")
+}
       }
 
       // when player selects scissors
@@ -140,17 +152,16 @@
         }
         currentRound++;
         computerPlay();
+        // counter that alerts first to 5 points
+if (playerScore === 5) {
+    alert("YOU WIN THE GAME!")
+} else if (computerScore === 5) {
+    alert("Sorry, loser. The computer won!")
+}
       }
 
 
-      // important note; you want to return the results
-      // of this function call, not console.log() them.
-      // To test this function console.log the results
-      // (check odin page for reference).
 
-      // write a new function called game
-
-      // use previous function INSIDE this one to play a
       // 5 round game that keeps score and reports winner
       // or loser at end.
     </script>
