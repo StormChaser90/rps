@@ -18,28 +18,31 @@
       let computerScore = 0;
       // Initialise games played to zero
       let gamesPlayed = 0;
+      // array containing choices
+      let choices = ["rock", "paper", "scissors"];
+
+      function computerPlay() {
+        // random function to choose from array
+        let random = choices[Math.floor(Math.random() * choices.length)];
+        // log computers random choice
+        txtC = "Computer chose " + random;
+        // display computers choice on screen
+        document.getElementById("computerChoice").innerHTML = txtC;
+        console.log(random);
+        // display winner/loser/tie
+        if (random === "scissors") {
+          alert("You won!");
+        }
+      }
 
       // when player selects rock
       function rock() {
         txt = "You chose rock";
         document.getElementById("playerChoice").innerHTML = txt;
         // run random choice for computer
-        function computerPlay() {
-          // array containing choices
-          const computerSelection = ["rock", "paper", "scissors"];
-          // random function to choose from array
-          const random =
-            computerSelection[
-              Math.floor(Math.random() * computerSelection.length)
-            ];
-          // log computers random choice
-          // console.log(random, computerSelection[random]);
-          txtC = "Computer chose: " + random;
-          // display computers choice on screen
-          document.getElementById("computerChoice").innerHTML = txtC;
-        }
         computerPlay();
       }
+
       // when player selects paper
       function paper() {
         txt = "You chose paper";
