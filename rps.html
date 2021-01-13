@@ -10,6 +10,15 @@
     <button onclick="scissors()" id="scissors">Scissors</button>
     <p id="playerChoice"></p>
     <p id="computerChoice"></p>
+    <p id="playerScore">
+        <div>Players Score</div>
+    </p>
+    <p id="computerScore">
+        <div>Computers Score</div>
+    </p>
+    <p id="currentRound">
+        <div>Current Round</div>
+    </p>
     <script>
       // Global variables
       // Initialise player score to zero
@@ -17,11 +26,16 @@
       // Initialise computer score to zero
       let computerScore = 0;
       // Initialise games played to zero
-      let roundsPlayed = 0;
+      let currentRound = 1;
       // array containing choices
       let choices = ["rock", "paper", "scissors"];
 
-      // create way to record points
+      // display computerScore
+      document.getElementById("computerScore").innerHTML = computerScore;
+      // display currentRound
+      document.getElementById("currentRound").innerHTML = currentRound;
+      // display playerScore
+      document.getElementById("playerScore").innerHTML = playerScore;
 
       // when player selects rock
       function rock() {
@@ -47,7 +61,13 @@
             computerScore++;
             alert("You lost round!");
           }
-          roundsPlayed++;
+      // display computerScore
+      document.getElementById("computerScore").innerHTML = computerScore;
+      // display currentRound
+      document.getElementById("currentRound").innerHTML = currentRound;
+      // display playerScore
+      document.getElementById("playerScore").innerHTML = playerScore;
+          currentRound++;
         }
         computerPlay();
       }
@@ -76,7 +96,7 @@
             computerScore++;
             alert("You lost round!");
           }
-          roundsPlayed++;
+          currentRound++;
         }
         computerPlay();
       }
@@ -105,10 +125,11 @@
             computerScore++;
             alert("You lost round!");
           }
-          roundsPlayed++;
+          currentRound++;
         }
         computerPlay();
       }
+
 
       // important note; you want to return the results
       // of this function call, not console.log() them.
