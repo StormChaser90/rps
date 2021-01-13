@@ -21,7 +21,34 @@
       // array containing choices
       let choices = ["rock", "paper", "scissors"];
 
-      // funtion that randomly generates the computers
+    //   // funtion that randomly generates the computers
+    //   // choice, compares against players choice,
+    //   // and declares winner/loser or tie.
+    //   function computerPlay() {
+    //     // random function to choose from array
+    //     let random = choices[Math.floor(Math.random() * choices.length)];
+    //     // log computers random choice
+    //     txtC = "Computer chose " + random;
+    //     // display computers choice on screen
+    //     document.getElementById("computerChoice").innerHTML = txtC;
+    //     // display winner/loser/tie
+    //     if (random === "scissors") {
+    //       alert("You won!");
+    //     } else if (random === "rock") {
+    //       alert("TIE!");
+    //     } else if (random === "paper") {
+    //       alert("You LOOSE!");
+    //     }
+    //   }
+
+
+
+
+      // when player selects rock
+      function rock() {
+        txt = "You chose rock";
+        document.getElementById("playerChoice").innerHTML = txt;
+              // funtion that randomly generates the computers
       // choice, compares against players choice,
       // and declares winner/loser or tie.
       function computerPlay() {
@@ -38,12 +65,8 @@
           alert("TIE!");
         } else if (random === "paper") {
           alert("You LOOSE!");
+        }
       }
-    }
-      // when player selects rock
-      function rock() {
-        txt = "You chose rock";
-        document.getElementById("playerChoice").innerHTML = txt;
         // run random choice for computer
         computerPlay();
       }
@@ -53,20 +76,6 @@
         txt = "You chose paper";
         document.getElementById("playerChoice").innerHTML = txt;
         // run random choice for computer
-        function computerPlay() {
-          // array containing choices
-          const computerSelection = ["rock", "paper", "scissors"];
-          // random function to choose from array
-          const random =
-            computerSelection[
-              Math.floor(Math.random() * computerSelection.length)
-            ];
-          // log computers random choice
-          // console.log(random, computerSelection[random]);
-          txtC = "Computer chose: " + random;
-          // display computers choice on screen
-          document.getElementById("computerChoice").innerHTML = txtC;
-        }
         computerPlay();
       }
 
@@ -75,20 +84,6 @@
         txt = "You chose scissors";
         document.getElementById("playerChoice").innerHTML = txt;
         // run random choice for computer
-        function computerPlay() {
-          // array containing choices
-          const computerSelection = ["rock", "paper", "scissors"];
-          // random function to choose from array
-          const random =
-            computerSelection[
-              Math.floor(Math.random() * computerSelection.length)
-            ];
-          // log computers random choice
-          // console.log(random, computerSelection[random]);
-          txtC = "Computer chose: " + random;
-          // display computers choice on screen
-          document.getElementById("computerChoice").innerHTML = txtC;
-        }
         computerPlay();
       }
 
