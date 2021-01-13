@@ -21,6 +21,9 @@
       // array containing choices
       let choices = ["rock", "paper", "scissors"];
 
+      // funtion that randomly generates the computers
+      // choice, compares against players choice,
+      // and declares winner/loser or tie.
       function computerPlay() {
         // random function to choose from array
         let random = choices[Math.floor(Math.random() * choices.length)];
@@ -28,13 +31,15 @@
         txtC = "Computer chose " + random;
         // display computers choice on screen
         document.getElementById("computerChoice").innerHTML = txtC;
-        console.log(random);
         // display winner/loser/tie
         if (random === "scissors") {
           alert("You won!");
-        }
+        } else if (random === "rock") {
+          alert("TIE!");
+        } else if (random === "paper") {
+          alert("You LOOSE!");
       }
-
+    }
       // when player selects rock
       function rock() {
         txt = "You chose rock";
