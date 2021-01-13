@@ -73,8 +73,10 @@
 // counter that alerts first to 5 points
 if (playerScore === 5) {
     alert("YOU WIN THE GAME!")
+    resetGame();
 } else if (computerScore === 5) {
     alert("Sorry, loser. The computer won!")
+    resetGame();
 }
       }
 
@@ -114,8 +116,10 @@ if (playerScore === 5) {
         // counter that alerts first to 5 points
 if (playerScore === 5) {
     alert("YOU WIN THE GAME!")
+    resetGame();
 } else if (computerScore === 5) {
     alert("Sorry, loser. The computer won!")
+    resetGame();
 }
       }
 
@@ -155,15 +159,19 @@ if (playerScore === 5) {
         // counter that alerts first to 5 points
 if (playerScore === 5) {
     alert("YOU WIN THE GAME!")
+    resetGame();
 } else if (computerScore === 5) {
     alert("Sorry, loser. The computer won!")
+    resetGame();
 }
       }
 
-
-
-      // 5 round game that keeps score and reports winner
-      // or loser at end.
+// add reset game button after first to 5 points
+function resetGame() {
+    playerScore = 0;
+    computerScore = 0;
+    currentRound = 1;
+}
     </script>
   </body>
 </html>
